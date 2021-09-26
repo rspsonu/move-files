@@ -1,6 +1,5 @@
 const fs = require("fs");
 const path = require("path");
-const colors = require("colors");
 
 const readFiles = (filePath, matchingString = [], filesFound = []) => {
   try {
@@ -43,9 +42,14 @@ const createFoldersAndFile = (
       fs.rmSync(newPath);
     }
     console.log(
-      `${move ? "Moved" : "Copied"} ${newPath.bgGreen.black} to \n${
-        path.join(destination, filePath).bgBlue.black
-      }\n`
+      "%s \x1b[42m\x1b[30m%s\x1b[0m",
+      `${move ? "Moved" : "Copied"}`,
+      `${newPath}`
+    );
+    console.log(
+      "%s \x1b[44m\x1b[30m%s\x1b[0m",
+      "to",
+      `${path.join(destination, filePath)}\n`
     );
     createFoldersAndFile(source, destination, folderPaths, move);
   }
