@@ -1,0 +1,14 @@
+{
+  "name": "movefiles",
+  "version": "1.0.0",
+  "description": "Move files from one directory to another",
+  "main": "run.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "author": "Rahul Singh Pawar",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "^1.4.0"
+  }
+}
